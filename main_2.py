@@ -50,9 +50,10 @@ def run_process():
 
     """To delete the categories, we execute the below code"""
     doc360_category_list = project_360.get_category_ID_list()
-    for cat_id in list(doc360_category_list.values()):
-        category_360.delete_category(cat_id)
-        sleep(2)
+    if len(doc360_category_list) > 0:
+        for cat_id in list(doc360_category_list.values()):
+            category_360.delete_category(cat_id)
+            sleep(2)
 
     """Creating Categories in Document360 based on the folders in Bitbucket repository."""
     for folder in folder_list:
