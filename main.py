@@ -1,11 +1,12 @@
 from flask import Flask, request, abort
+from main_2 import run_process
 
 app = Flask(__name__)
 
 @app.route("/webhook", methods=["POST"])
 def webhook():
     if request.method == "POST":
-        print("Process the Change")
+        run_process()
         return "success", 200
     else:
         abort(400)
