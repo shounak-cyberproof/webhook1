@@ -66,8 +66,12 @@ def run_process():
     """Read README file"""
     content_list = []
     for file_name in file_list:
-        pub_content, prv_content = bitbucket_obj.read_file_direct(file_name=file_name, separator="DEVELOPER_SPECIFIC")
-        content_list.append((pub_content, prv_content))
+        content = bitbucket_obj.read_file_direct(file_name=file_name, separator="DEVELOPER_SPECIFIC")
+        if len(content) == 2:
+            pub_content, prv_content = content[0],content[1]
+            content_list.append((pub_content, prv_content))
+        else:
+            content_list = content
 
     """________________________________________________________________________________________________________________"""
 
