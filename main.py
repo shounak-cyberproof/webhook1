@@ -1,5 +1,5 @@
 from flask import Flask, request, abort
-from main_2 import run_process
+from run_process import run_process
 
 app = Flask(__name__)
 

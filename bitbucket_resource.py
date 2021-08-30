@@ -16,6 +16,8 @@ class Bitbucket:
     def is_folder(var_name):
         if "." in var_name:
             return False
+        elif var_name == "README":
+            return False
         else:
             return True
 
@@ -59,9 +61,18 @@ class Bitbucket:
 
 
     def read_file(self, folder_name, file_name):
-        """reads the content of the file    """
+        """reads the content of the file in folder"""
         response = requests.get(
             url=self.base_url + f"repositories/{self.workspace}/{self.repo_name}/src/master/{folder_name}/{file_name}",
             auth=HTTPBasicAuth(self.username, self.password))
 
         return response.text
+
+    def read_file_direct(self, file_name, separator):
+        """reads the content of the file in repository.
+        it returns Public part and Private part of file based on the separator"""
+        response = requests.get(
+            url=self.base_url + f"repositories/{self.workspace}/{self.repo_name}/src/master/{file_name}",
+            auth=HTTPBasicAuth(self.username, self.password))
+
+        return response.text.split(separator)
