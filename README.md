@@ -12,10 +12,10 @@ The integration is done using RESTful APIs of Document360 and Bitbucket.
 Automation is achieved via using webhook.
 
 File Details: <br>
-bitbucket_resource.py - contains class & methods for using bitbucket APIs <br> 
-doc360_resource.py - contains class & methods for using Document360 APIs <br>
-run_process.py - this file contains function to use the APIs of Document360 & Bibucket to transfer any change made to Bitbucket repository to Document360 <br>
-main.py - this file contains the webhook creation and execution of code when webhook is hit <br>
+* bitbucket_resource.py - contains class & methods for using bitbucket APIs <br> 
+* doc360_resource.py - contains class & methods for using Document360 APIs <br>
+* run_process.py - this file contains function to use the APIs of Document360 & Bibucket to transfer any change made to Bitbucket repository to Document360 <br>
+* main.py - this file contains the webhook creation and execution of code when webhook is hit <br>
 
 
 Regards,
