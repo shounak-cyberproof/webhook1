@@ -12,7 +12,7 @@ def run_process():
     repo_name = "sample_project"
     username = "bopod97869@fxseller.com"
     password = "P@ssword1"
-    document360_token = "+CJ694dRsdW+bBQuOJ9qZg0kW97252Re4ZvJxIwcAdDJXV/ZX0X8tMK/fPr6r8j0o9UYK+67xewKhemZlMoA/uq5Gyg3R/Ga6kfKUr/wnm3EnwBOAa2L4g8RJtXkqgq1/ynZluzx9v95aBR4b+XkHg=="
+    document360_token = "RKo/9SkC7rCD8/0Wfe1dts2OCgynxaVzF0/kU5Clg0qZTVSS0XkYoaDerbJdiYM6u0DxgYAU2mLM3HxX8pG7Z2wqBu5MALnsPprohmERARh3er7SCKwPdDNnJy04OkqAky/c4RzDJlifD3oPlvrCvw=="
 
 
     """Initiating objects of Document360 which will be needed"""
